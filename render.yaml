@@ -2,10 +2,8 @@ services:
   - type: web
     name: newssnapaiserver
     env: node
-    buildCommand: npm ci && npm run build
-    startCommand: cd /opt/render/project/src && npm start
+    buildCommand: npm install && npm run build
+    startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
-      - key: PORT
-        value: 10000
